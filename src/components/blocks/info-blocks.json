@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blocks_info_blocks",
+  "info": {
+    "displayName": "Info Blocks",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "blocks": {
+      "displayName": "Info Block",
+      "type": "component",
+      "repeatable": true,
+      "component": "subblocks.info-block"
+    }
+  }
+}

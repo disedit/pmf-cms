@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blocks_ticket_blocks",
+  "info": {
+    "displayName": "Ticket Blocks",
+    "icon": "dashboard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "blocks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "subblocks.ticket-card"
+    }
+  }
+}

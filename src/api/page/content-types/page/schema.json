@@ -4,7 +4,8 @@
   "info": {
     "singularName": "page",
     "pluralName": "pages",
-    "displayName": "Page"
+    "displayName": "Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -28,6 +29,67 @@
       "type": "uid",
       "targetField": "title",
       "required": true
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.home-hero",
+        "blocks.page-hero",
+        "blocks.ticket-block",
+        "blocks.faq",
+        "blocks.info-blocks",
+        "blocks.countdown"
+      ],
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "ctas": {
+      "type": "component",
+      "repeatable": true,
+      "component": "menu.menu-item"
+    },
+    "strip_titles": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "seo_media": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "seo_description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "seo_keywords": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": false
     }
   }
 }

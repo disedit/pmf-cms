@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_blocks_countdowns",
+  "info": {
+    "displayName": "Countdown",
+    "icon": "hashtag",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "countdown_to": {
+      "type": "datetime",
+      "required": true
+    },
+    "heading": {
+      "type": "string"
+    }
+  }
+}

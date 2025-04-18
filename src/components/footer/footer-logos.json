@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_footer_footer_logos",
+  "info": {
+    "displayName": "Footer Logos",
+    "icon": "heart"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "logos": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}

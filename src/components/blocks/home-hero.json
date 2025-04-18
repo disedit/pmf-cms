@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_blocks_home_heroes",
+  "info": {
+    "displayName": "Home Hero",
+    "icon": "server",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "blocks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "subblocks.marquee-block"
+    },
+    "loop": {
+      "type": "boolean",
+      "default": true
+    },
+    "gap": {
+      "type": "boolean",
+      "default": false
+    },
+    "speed": {
+      "type": "integer",
+      "default": 2000,
+      "required": true
+    }
+  }
+}

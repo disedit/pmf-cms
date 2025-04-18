@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_subblocks_ticket_cards",
+  "info": {
+    "displayName": "Ticket Block",
+    "icon": "cursor",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "button_label": {
+      "type": "string"
+    },
+    "button_url": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_page_heroes",
+  "info": {
+    "displayName": "Page Hero",
+    "icon": "monitor"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "background": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

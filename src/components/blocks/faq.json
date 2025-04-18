@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_blocks_faqs",
+  "info": {
+    "displayName": "FAQ",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "picture": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "items": {
+      "displayName": "FAQ Item",
+      "type": "component",
+      "repeatable": true,
+      "component": "subblocks.faq-item"
+    }
+  }
+}

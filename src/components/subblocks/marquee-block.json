@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_subblocks_marquee_blocks",
+  "info": {
+    "displayName": "Hero Block",
+    "icon": "dashboard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "blocks"
+    },
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
+    }
+  }
+}
