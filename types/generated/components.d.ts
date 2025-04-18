@@ -16,6 +16,7 @@ export interface BlocksCountdown extends Struct.ComponentSchema {
 export interface BlocksFaq extends Struct.ComponentSchema {
   collectionName: 'components_blocks_faqs';
   info: {
+    description: '';
     displayName: 'FAQ';
     icon: 'bulletList';
   };
@@ -124,10 +125,14 @@ export interface MenuMenuItem extends Struct.ComponentSchema {
 export interface SubblocksFaqItem extends Struct.ComponentSchema {
   collectionName: 'components_subblocks_faq_items';
   info: {
+    description: '';
     displayName: 'FAQ Item';
     icon: 'cursor';
   };
-  attributes: {};
+  attributes: {
+    content: Schema.Attribute.Blocks;
+    heading: Schema.Attribute.String;
+  };
 }
 
 export interface SubblocksInfoBlock extends Struct.ComponentSchema {

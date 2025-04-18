@@ -2,8 +2,16 @@
   "collectionName": "components_subblocks_faq_items",
   "info": {
     "displayName": "FAQ Item",
-    "icon": "cursor"
+    "icon": "cursor",
+    "description": ""
   },
   "options": {},
-  "attributes": {}
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "content": {
+      "type": "blocks"
+    }
+  }
 }
