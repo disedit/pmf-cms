@@ -27,6 +27,19 @@ export interface BlocksFaq extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksGrid extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_grids';
+  info: {
+    description: '';
+    displayName: 'Grid';
+    icon: 'apps';
+  };
+  attributes: {
+    concerts: Schema.Attribute.Relation<'oneToMany', 'api::concert.concert'>;
+    heading: Schema.Attribute.String;
+  };
+}
+
 export interface BlocksHomeHero extends Struct.ComponentSchema {
   collectionName: 'components_blocks_home_heroes';
   info: {
@@ -112,13 +125,13 @@ export interface GlobalSocials extends Struct.ComponentSchema {
 export interface MenuMenuItem extends Struct.ComponentSchema {
   collectionName: 'components_menu_menu_items';
   info: {
+    description: '';
     displayName: 'Menu Item';
     icon: 'bulletList';
   };
   attributes: {
     label: Schema.Attribute.String & Schema.Attribute.Required;
     link: Schema.Attribute.String;
-    page: Schema.Attribute.Relation<'oneToOne', 'api::page.page'>;
   };
 }
 
@@ -132,6 +145,22 @@ export interface SubblocksFaqItem extends Struct.ComponentSchema {
   attributes: {
     content: Schema.Attribute.Blocks;
     heading: Schema.Attribute.String;
+  };
+}
+
+export interface SubblocksGridItem extends Struct.ComponentSchema {
+  collectionName: 'components_subblocks_grid_items';
+  info: {
+    displayName: 'Grid Item';
+    icon: 'file';
+  };
+  attributes: {
+    cta_label: Schema.Attribute.String;
+    cta_url: Schema.Attribute.String;
+    date: Schema.Attribute.DateTime & Schema.Attribute.Required;
+    picture: Schema.Attribute.Media<'images' | 'files', true>;
+    title: Schema.Attribute.String;
+    venue: Schema.Attribute.String;
   };
 }
 
@@ -185,6 +214,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'blocks.countdown': BlocksCountdown;
       'blocks.faq': BlocksFaq;
+      'blocks.grid': BlocksGrid;
       'blocks.home-hero': BlocksHomeHero;
       'blocks.info-blocks': BlocksInfoBlocks;
       'blocks.page-hero': BlocksPageHero;
@@ -193,6 +223,7 @@ declare module '@strapi/strapi' {
       'global.socials': GlobalSocials;
       'menu.menu-item': MenuMenuItem;
       'subblocks.faq-item': SubblocksFaqItem;
+      'subblocks.grid-item': SubblocksGridItem;
       'subblocks.info-block': SubblocksInfoBlock;
       'subblocks.marquee-block': SubblocksMarqueeBlock;
       'subblocks.ticket-card': SubblocksTicketCard;

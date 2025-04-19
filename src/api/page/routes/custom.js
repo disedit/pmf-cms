@@ -3,7 +3,10 @@ module.exports = {
     {
       method: 'GET',
       path: '/pages/:slug',
-      handler: 'page.findOne'
+      handler: 'page.findOne',
+      config: {
+        auth: false
+      },
     }
   ],
 }

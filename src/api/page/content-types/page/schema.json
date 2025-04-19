@@ -38,7 +38,8 @@
         "blocks.ticket-block",
         "blocks.faq",
         "blocks.info-blocks",
-        "blocks.countdown"
+        "blocks.countdown",
+        "blocks.grid"
       ],
       "required": true,
       "pluginOptions": {

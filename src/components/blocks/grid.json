@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_grids",
+  "info": {
+    "displayName": "Grid",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "concerts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::concert.concert"
+    }
+  }
+}
