@@ -7,12 +7,12 @@
   },
   "options": {},
   "attributes": {
+    "heading": {
+      "type": "string"
+    },
     "countdown_to": {
       "type": "datetime",
       "required": true
-    },
-    "heading": {
-      "type": "string"
     }
   }
 }

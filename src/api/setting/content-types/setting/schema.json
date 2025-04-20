@@ -16,6 +16,16 @@
     }
   },
   "attributes": {
+    "site_name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true,
+      "default": "Potries Music Fest"
+    },
     "menu_items": {
       "displayName": "Menu Item",
       "type": "component",
@@ -80,40 +90,11 @@
         }
       }
     },
-    "site_name": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta.seo",
       "required": true,
-      "default": "Potries Music Fest"
-    },
-    "seo_media": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files"
-      ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "seo_description": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "seo_keywords": {
-      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true

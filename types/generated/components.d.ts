@@ -1,5 +1,16 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface BlocksArchive extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_archives';
+  info: {
+    displayName: 'Archive';
+    icon: 'archive';
+  };
+  attributes: {
+    posters: Schema.Attribute.Component<'subblocks.poster', true>;
+  };
+}
+
 export interface BlocksCountdown extends Struct.ComponentSchema {
   collectionName: 'components_blocks_countdowns';
   info: {
@@ -36,6 +47,7 @@ export interface BlocksGrid extends Struct.ComponentSchema {
   };
   attributes: {
     concerts: Schema.Attribute.Relation<'oneToMany', 'api::concert.concert'>;
+    filters: Schema.Attribute.Text;
     heading: Schema.Attribute.String;
   };
 }
@@ -135,6 +147,20 @@ export interface MenuMenuItem extends Struct.ComponentSchema {
   };
 }
 
+export interface MetaSeo extends Struct.ComponentSchema {
+  collectionName: 'components_meta_seos';
+  info: {
+    displayName: 'SEO';
+    icon: 'code';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    keywords: Schema.Attribute.String;
+    og_image: Schema.Attribute.Media<'images' | 'files'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SubblocksFaqItem extends Struct.ComponentSchema {
   collectionName: 'components_subblocks_faq_items';
   info: {
@@ -145,22 +171,6 @@ export interface SubblocksFaqItem extends Struct.ComponentSchema {
   attributes: {
     content: Schema.Attribute.Blocks;
     heading: Schema.Attribute.String;
-  };
-}
-
-export interface SubblocksGridItem extends Struct.ComponentSchema {
-  collectionName: 'components_subblocks_grid_items';
-  info: {
-    displayName: 'Grid Item';
-    icon: 'file';
-  };
-  attributes: {
-    cta_label: Schema.Attribute.String;
-    cta_url: Schema.Attribute.String;
-    date: Schema.Attribute.DateTime & Schema.Attribute.Required;
-    picture: Schema.Attribute.Media<'images' | 'files', true>;
-    title: Schema.Attribute.String;
-    venue: Schema.Attribute.String;
   };
 }
 
@@ -190,7 +200,23 @@ export interface SubblocksMarqueeBlock extends Struct.ComponentSchema {
   };
   attributes: {
     background: Schema.Attribute.Media<'files' | 'images'>;
+    link: Schema.Attribute.String;
     text: Schema.Attribute.Blocks;
+  };
+}
+
+export interface SubblocksPoster extends Struct.ComponentSchema {
+  collectionName: 'components_subblocks_posters';
+  info: {
+    description: '';
+    displayName: 'Poster';
+    icon: 'file';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+    picture: Schema.Attribute.Media<'images' | 'files', true> &
+      Schema.Attribute.Required;
   };
 }
 
@@ -212,6 +238,7 @@ export interface SubblocksTicketCard extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'blocks.archive': BlocksArchive;
       'blocks.countdown': BlocksCountdown;
       'blocks.faq': BlocksFaq;
       'blocks.grid': BlocksGrid;
@@ -222,10 +249,11 @@ declare module '@strapi/strapi' {
       'footer.footer-logos': FooterFooterLogos;
       'global.socials': GlobalSocials;
       'menu.menu-item': MenuMenuItem;
+      'meta.seo': MetaSeo;
       'subblocks.faq-item': SubblocksFaqItem;
-      'subblocks.grid-item': SubblocksGridItem;
       'subblocks.info-block': SubblocksInfoBlock;
       'subblocks.marquee-block': SubblocksMarqueeBlock;
+      'subblocks.poster': SubblocksPoster;
       'subblocks.ticket-card': SubblocksTicketCard;
     }
   }

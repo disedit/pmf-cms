@@ -42,6 +42,9 @@
     },
     "cta_url": {
       "type": "string"
+    },
+    "filter_value": {
+      "type": "string"
     }
   }
 }

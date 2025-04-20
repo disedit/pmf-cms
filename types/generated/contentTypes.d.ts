@@ -388,6 +388,7 @@ export interface ApiConcertConcert extends Struct.CollectionTypeSchema {
     cta_label: Schema.Attribute.String;
     cta_url: Schema.Attribute.String;
     date: Schema.Attribute.DateTime & Schema.Attribute.Required;
+    filter_value: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -429,6 +430,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'blocks.info-blocks',
         'blocks.countdown',
         'blocks.grid',
+        'blocks.archive',
       ]
     > &
       Schema.Attribute.Required &
@@ -444,19 +446,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::page.page'>;
     publishedAt: Schema.Attribute.DateTime;
-    seo_description: Schema.Attribute.Text &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    seo_keywords: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    seo_media: Schema.Attribute.Media<'images' | 'files'> &
+    seo: Schema.Attribute.Component<'meta.seo', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -544,19 +534,8 @@ export interface ApiSettingSetting extends Struct.SingleTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    seo_description: Schema.Attribute.Text &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    seo_keywords: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    seo_media: Schema.Attribute.Media<'images' | 'files'> &
+    seo: Schema.Attribute.Component<'meta.seo', false> &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

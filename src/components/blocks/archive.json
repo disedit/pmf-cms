@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blocks_archives",
+  "info": {
+    "displayName": "Archive",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "posters": {
+      "displayName": "Poster",
+      "type": "component",
+      "repeatable": true,
+      "component": "subblocks.poster"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_subblocks_posters",
+  "info": {
+    "displayName": "Poster",
+    "icon": "file",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "picture": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "label": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

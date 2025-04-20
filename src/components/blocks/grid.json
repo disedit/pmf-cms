@@ -14,6 +14,9 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::concert.concert"
+    },
+    "filters": {
+      "type": "text"
     }
   }
 }
