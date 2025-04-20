@@ -17,6 +17,9 @@
     },
     "filters": {
       "type": "text"
+    },
+    "side_title": {
+      "type": "string"
     }
   }
 }

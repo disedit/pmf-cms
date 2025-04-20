@@ -12,10 +12,6 @@
       "repeatable": true,
       "component": "subblocks.marquee-block"
     },
-    "loop": {
-      "type": "boolean",
-      "default": true
-    },
     "gap": {
       "type": "boolean",
       "default": false
@@ -24,6 +20,9 @@
       "type": "integer",
       "default": 2000,
       "required": true
+    },
+    "side_title": {
+      "type": "string"
     }
   }
 }

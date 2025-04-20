@@ -54,14 +54,6 @@
       "repeatable": true,
       "component": "menu.menu-item"
     },
-    "strip_titles": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "seo": {
       "type": "component",
       "repeatable": false,

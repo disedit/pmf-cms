@@ -3,11 +3,13 @@ import type { Schema, Struct } from '@strapi/strapi';
 export interface BlocksArchive extends Struct.ComponentSchema {
   collectionName: 'components_blocks_archives';
   info: {
+    description: '';
     displayName: 'Archive';
     icon: 'archive';
   };
   attributes: {
     posters: Schema.Attribute.Component<'subblocks.poster', true>;
+    side_title: Schema.Attribute.String;
   };
 }
 
@@ -21,6 +23,7 @@ export interface BlocksCountdown extends Struct.ComponentSchema {
   attributes: {
     countdown_to: Schema.Attribute.DateTime & Schema.Attribute.Required;
     heading: Schema.Attribute.String;
+    side_title: Schema.Attribute.String;
   };
 }
 
@@ -34,6 +37,7 @@ export interface BlocksFaq extends Struct.ComponentSchema {
   attributes: {
     items: Schema.Attribute.Component<'subblocks.faq-item', true>;
     picture: Schema.Attribute.Media<'images' | 'files'>;
+    side_title: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -49,6 +53,7 @@ export interface BlocksGrid extends Struct.ComponentSchema {
     concerts: Schema.Attribute.Relation<'oneToMany', 'api::concert.concert'>;
     filters: Schema.Attribute.Text;
     heading: Schema.Attribute.String;
+    side_title: Schema.Attribute.String;
   };
 }
 
@@ -62,7 +67,7 @@ export interface BlocksHomeHero extends Struct.ComponentSchema {
   attributes: {
     blocks: Schema.Attribute.Component<'subblocks.marquee-block', true>;
     gap: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    loop: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    side_title: Schema.Attribute.String;
     speed: Schema.Attribute.Integer &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<2000>;
@@ -72,22 +77,26 @@ export interface BlocksHomeHero extends Struct.ComponentSchema {
 export interface BlocksInfoBlocks extends Struct.ComponentSchema {
   collectionName: 'components_blocks_info_blocks';
   info: {
+    description: '';
     displayName: 'Info Blocks';
     icon: 'book';
   };
   attributes: {
     blocks: Schema.Attribute.Component<'subblocks.info-block', true>;
+    side_title: Schema.Attribute.String;
   };
 }
 
 export interface BlocksPageHero extends Struct.ComponentSchema {
   collectionName: 'components_blocks_page_heroes';
   info: {
+    description: '';
     displayName: 'Page Hero';
     icon: 'monitor';
   };
   attributes: {
     background: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    side_title: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -101,6 +110,7 @@ export interface BlocksTicketBlock extends Struct.ComponentSchema {
   };
   attributes: {
     blocks: Schema.Attribute.Component<'subblocks.ticket-card', true>;
+    side_title: Schema.Attribute.String;
   };
 }
 

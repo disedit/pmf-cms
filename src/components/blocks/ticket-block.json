@@ -11,6 +11,9 @@
       "type": "component",
       "repeatable": true,
       "component": "subblocks.ticket-card"
+    },
+    "side_title": {
+      "type": "string"
     }
   }
 }

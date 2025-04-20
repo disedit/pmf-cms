@@ -13,6 +13,9 @@
     "countdown_to": {
       "type": "datetime",
       "required": true
+    },
+    "side_title": {
+      "type": "string"
     }
   }
 }
