@@ -515,6 +515,9 @@ export interface ApiSettingSetting extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::setting.setting'
     >;
+    marquee_speed: Schema.Attribute.Decimal &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<4>;
     marquee_text: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

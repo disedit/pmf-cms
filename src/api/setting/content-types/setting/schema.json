@@ -45,6 +45,11 @@
         }
       }
     },
+    "marquee_speed": {
+      "type": "decimal",
+      "default": 4,
+      "required": true
+    },
     "footer_logos": {
       "displayName": "Footer Logos",
       "type": "component",

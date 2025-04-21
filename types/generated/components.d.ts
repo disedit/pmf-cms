@@ -191,6 +191,7 @@ export interface SubblocksFaqItem extends Struct.ComponentSchema {
     icon: 'cursor';
   };
   attributes: {
+    anchor_id: Schema.Attribute.String;
     content: Schema.Attribute.Blocks;
     heading: Schema.Attribute.String;
   };
