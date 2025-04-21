@@ -73,9 +73,9 @@ export interface BlocksHomeHero extends Struct.ComponentSchema {
     blocks: Schema.Attribute.Component<'subblocks.marquee-block', true>;
     gap: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     side_title: Schema.Attribute.String;
-    speed: Schema.Attribute.Integer &
+    speed: Schema.Attribute.Decimal &
       Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<2000>;
+      Schema.Attribute.DefaultTo<0.5>;
   };
 }
 

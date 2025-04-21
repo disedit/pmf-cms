@@ -17,8 +17,8 @@
       "default": false
     },
     "speed": {
-      "type": "integer",
-      "default": 2000,
+      "type": "decimal",
+      "default": 0.5,
       "required": true
     },
     "side_title": {
