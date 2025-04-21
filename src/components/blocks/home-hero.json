@@ -1,7 +1,7 @@
 {
   "collectionName": "components_blocks_home_heroes",
   "info": {
-    "displayName": "Home Hero",
+    "displayName": "Marquee Scroller",
     "icon": "server",
     "description": ""
   },

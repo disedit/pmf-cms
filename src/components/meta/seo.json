@@ -2,7 +2,8 @@
   "collectionName": "components_meta_seos",
   "info": {
     "displayName": "SEO",
-    "icon": "code"
+    "icon": "code",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -10,13 +11,12 @@
       "type": "string"
     },
     "og_image": {
-      "allowedTypes": [
-        "images",
-        "files"
-      ],
       "type": "media",
       "multiple": false,
-      "required": false
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "description": {
       "type": "text"

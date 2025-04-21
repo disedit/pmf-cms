@@ -1,7 +1,7 @@
 {
   "collectionName": "components_blocks_page_heroes",
   "info": {
-    "displayName": "Page Hero",
+    "displayName": "Page Header",
     "icon": "monitor",
     "description": ""
   },
@@ -16,12 +16,14 @@
       "required": false,
       "allowedTypes": [
         "images",
-        "files",
         "videos"
       ]
     },
     "side_title": {
       "type": "string"
+    },
+    "overlay": {
+      "type": "boolean"
     }
   }
 }

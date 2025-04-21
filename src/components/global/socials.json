@@ -15,7 +15,7 @@
       "type": "enumeration",
       "enum": [
         "instagram",
-        "facebook",
+        "facebook-f",
         "tiktok",
         "x"
       ],

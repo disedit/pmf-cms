@@ -36,7 +36,7 @@ export interface BlocksFaq extends Struct.ComponentSchema {
   };
   attributes: {
     items: Schema.Attribute.Component<'subblocks.faq-item', true>;
-    picture: Schema.Attribute.Media<'images' | 'files'>;
+    picture: Schema.Attribute.Media<'images' | 'videos'>;
     side_title: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
@@ -61,7 +61,7 @@ export interface BlocksHomeHero extends Struct.ComponentSchema {
   collectionName: 'components_blocks_home_heroes';
   info: {
     description: '';
-    displayName: 'Home Hero';
+    displayName: 'Marquee Scroller';
     icon: 'server';
   };
   attributes: {
@@ -91,11 +91,12 @@ export interface BlocksPageHero extends Struct.ComponentSchema {
   collectionName: 'components_blocks_page_heroes';
   info: {
     description: '';
-    displayName: 'Page Hero';
+    displayName: 'Page Header';
     icon: 'monitor';
   };
   attributes: {
-    background: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    background: Schema.Attribute.Media<'images' | 'videos'>;
+    overlay: Schema.Attribute.Boolean;
     side_title: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
@@ -117,13 +118,13 @@ export interface BlocksTicketBlock extends Struct.ComponentSchema {
 export interface FooterFooterLogos extends Struct.ComponentSchema {
   collectionName: 'components_footer_footer_logos';
   info: {
+    description: '';
     displayName: 'Footer Logos';
     icon: 'heart';
   };
   attributes: {
     label: Schema.Attribute.String & Schema.Attribute.Required;
-    logos: Schema.Attribute.Media<'images' | 'files', true> &
-      Schema.Attribute.Required;
+    logos: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
   };
 }
 
@@ -136,7 +137,7 @@ export interface GlobalSocials extends Struct.ComponentSchema {
   };
   attributes: {
     icon: Schema.Attribute.Enumeration<
-      ['instagram', 'facebook', 'tiktok', 'x']
+      ['instagram', 'facebook-f', 'tiktok', 'x']
     > &
       Schema.Attribute.Required;
     label: Schema.Attribute.String & Schema.Attribute.Required;
@@ -160,13 +161,14 @@ export interface MenuMenuItem extends Struct.ComponentSchema {
 export interface MetaSeo extends Struct.ComponentSchema {
   collectionName: 'components_meta_seos';
   info: {
+    description: '';
     displayName: 'SEO';
     icon: 'code';
   };
   attributes: {
     description: Schema.Attribute.Text;
     keywords: Schema.Attribute.String;
-    og_image: Schema.Attribute.Media<'images' | 'files'>;
+    og_image: Schema.Attribute.Media<'images'>;
     title: Schema.Attribute.String;
   };
 }
@@ -196,7 +198,7 @@ export interface SubblocksInfoBlock extends Struct.ComponentSchema {
     inverted: Schema.Attribute.Boolean &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<false>;
-    picture: Schema.Attribute.Media<'images' | 'files'>;
+    picture: Schema.Attribute.Media<'images' | 'videos'>;
     text: Schema.Attribute.Blocks;
   };
 }
@@ -209,7 +211,7 @@ export interface SubblocksMarqueeBlock extends Struct.ComponentSchema {
     icon: 'dashboard';
   };
   attributes: {
-    background: Schema.Attribute.Media<'files' | 'images'>;
+    background: Schema.Attribute.Media<'images'>;
     link: Schema.Attribute.String;
     text: Schema.Attribute.Blocks;
   };
@@ -225,8 +227,7 @@ export interface SubblocksPoster extends Struct.ComponentSchema {
   attributes: {
     label: Schema.Attribute.String;
     link: Schema.Attribute.String;
-    picture: Schema.Attribute.Media<'images' | 'files', true> &
-      Schema.Attribute.Required;
+    picture: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
   };
 }
 

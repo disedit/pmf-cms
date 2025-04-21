@@ -16,7 +16,7 @@
       "required": false,
       "allowedTypes": [
         "images",
-        "files"
+        "videos"
       ]
     },
     "inverted": {
