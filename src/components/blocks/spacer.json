@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_blocks_spacers",
+  "info": {
+    "displayName": "Spacer",
+    "icon": "arrowDown"
+  },
+  "options": {},
+  "attributes": {
+    "height": {
+      "type": "string",
+      "required": true,
+      "default": "1rem"
+    }
+  }
+}

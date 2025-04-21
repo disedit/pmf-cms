@@ -431,6 +431,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'blocks.countdown',
         'blocks.grid',
         'blocks.archive',
+        'blocks.spacer',
       ]
     > &
       Schema.Attribute.Required &

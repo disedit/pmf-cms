@@ -111,6 +111,19 @@ export interface BlocksPageHero extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksSpacer extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_spacers';
+  info: {
+    displayName: 'Spacer';
+    icon: 'arrowDown';
+  };
+  attributes: {
+    height: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'1rem'>;
+  };
+}
+
 export interface BlocksTicketBlock extends Struct.ComponentSchema {
   collectionName: 'components_blocks_ticket_blocks';
   info: {
@@ -267,6 +280,7 @@ declare module '@strapi/strapi' {
       'blocks.home-hero': BlocksHomeHero;
       'blocks.info-blocks': BlocksInfoBlocks;
       'blocks.page-hero': BlocksPageHero;
+      'blocks.spacer': BlocksSpacer;
       'blocks.ticket-block': BlocksTicketBlock;
       'footer.footer-logos': FooterFooterLogos;
       'global.socials': GlobalSocials;

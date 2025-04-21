@@ -40,7 +40,8 @@
         "blocks.info-blocks",
         "blocks.countdown",
         "blocks.grid",
-        "blocks.archive"
+        "blocks.archive",
+        "blocks.spacer"
       ],
       "required": true,
       "pluginOptions": {
