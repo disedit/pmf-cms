@@ -12,9 +12,6 @@
     },
     "content": {
       "type": "blocks"
-    },
-    "anchor_id": {
-      "type": "string"
     }
   }
 }

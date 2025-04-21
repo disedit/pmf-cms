@@ -191,7 +191,6 @@ export interface SubblocksFaqItem extends Struct.ComponentSchema {
     icon: 'cursor';
   };
   attributes: {
-    anchor_id: Schema.Attribute.String;
     content: Schema.Attribute.Blocks;
     heading: Schema.Attribute.String;
   };
@@ -205,6 +204,7 @@ export interface SubblocksInfoBlock extends Struct.ComponentSchema {
     icon: 'archive';
   };
   attributes: {
+    anchor_id: Schema.Attribute.String;
     heading: Schema.Attribute.String;
     inverted: Schema.Attribute.Boolean &
       Schema.Attribute.Required &
@@ -238,7 +238,7 @@ export interface SubblocksPoster extends Struct.ComponentSchema {
   attributes: {
     label: Schema.Attribute.String;
     link: Schema.Attribute.String;
-    picture: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
+    picture: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
   };
 }
 
