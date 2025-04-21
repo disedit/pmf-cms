@@ -23,7 +23,12 @@
       "type": "string"
     },
     "overlay": {
-      "type": "boolean"
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "anchor_id": {
+      "type": "string"
     }
   }
 }

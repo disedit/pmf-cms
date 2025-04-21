@@ -15,6 +15,9 @@
     },
     "side_title": {
       "type": "string"
+    },
+    "anchor_id": {
+      "type": "string"
     }
   }
 }

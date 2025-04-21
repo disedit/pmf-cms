@@ -8,6 +8,7 @@ export interface BlocksArchive extends Struct.ComponentSchema {
     icon: 'archive';
   };
   attributes: {
+    anchor_id: Schema.Attribute.String;
     posters: Schema.Attribute.Component<'subblocks.poster', true>;
     side_title: Schema.Attribute.String;
   };
@@ -21,6 +22,7 @@ export interface BlocksCountdown extends Struct.ComponentSchema {
     icon: 'hashtag';
   };
   attributes: {
+    anchor_id: Schema.Attribute.String;
     countdown_to: Schema.Attribute.DateTime & Schema.Attribute.Required;
     heading: Schema.Attribute.String;
     side_title: Schema.Attribute.String;
@@ -35,6 +37,7 @@ export interface BlocksFaq extends Struct.ComponentSchema {
     icon: 'bulletList';
   };
   attributes: {
+    anchor_id: Schema.Attribute.String;
     items: Schema.Attribute.Component<'subblocks.faq-item', true>;
     picture: Schema.Attribute.Media<'images' | 'videos'>;
     side_title: Schema.Attribute.String;
@@ -50,6 +53,7 @@ export interface BlocksGrid extends Struct.ComponentSchema {
     icon: 'apps';
   };
   attributes: {
+    anchor_id: Schema.Attribute.String;
     concerts: Schema.Attribute.Relation<'oneToMany', 'api::concert.concert'>;
     filters: Schema.Attribute.Text;
     heading: Schema.Attribute.String;
@@ -65,6 +69,7 @@ export interface BlocksHomeHero extends Struct.ComponentSchema {
     icon: 'server';
   };
   attributes: {
+    anchor_id: Schema.Attribute.String;
     blocks: Schema.Attribute.Component<'subblocks.marquee-block', true>;
     gap: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     side_title: Schema.Attribute.String;
@@ -82,6 +87,7 @@ export interface BlocksInfoBlocks extends Struct.ComponentSchema {
     icon: 'book';
   };
   attributes: {
+    anchor_id: Schema.Attribute.String;
     blocks: Schema.Attribute.Component<'subblocks.info-block', true>;
     side_title: Schema.Attribute.String;
   };
@@ -95,8 +101,11 @@ export interface BlocksPageHero extends Struct.ComponentSchema {
     icon: 'monitor';
   };
   attributes: {
+    anchor_id: Schema.Attribute.String;
     background: Schema.Attribute.Media<'images' | 'videos'>;
-    overlay: Schema.Attribute.Boolean;
+    overlay: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
     side_title: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
@@ -110,6 +119,7 @@ export interface BlocksTicketBlock extends Struct.ComponentSchema {
     icon: 'dashboard';
   };
   attributes: {
+    anchor_id: Schema.Attribute.String;
     blocks: Schema.Attribute.Component<'subblocks.ticket-card', true>;
     side_title: Schema.Attribute.String;
   };
