@@ -111,6 +111,20 @@ export interface BlocksPageHero extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksPosters extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_posters';
+  info: {
+    description: '';
+    displayName: 'Posters';
+    icon: 'landscape';
+  };
+  attributes: {
+    anchor_id: Schema.Attribute.String;
+    posters: Schema.Attribute.Media<'images' | 'files', true>;
+    side_title: Schema.Attribute.String;
+  };
+}
+
 export interface BlocksSpacer extends Struct.ComponentSchema {
   collectionName: 'components_blocks_spacers';
   info: {
@@ -280,6 +294,7 @@ declare module '@strapi/strapi' {
       'blocks.home-hero': BlocksHomeHero;
       'blocks.info-blocks': BlocksInfoBlocks;
       'blocks.page-hero': BlocksPageHero;
+      'blocks.posters': BlocksPosters;
       'blocks.spacer': BlocksSpacer;
       'blocks.ticket-block': BlocksTicketBlock;
       'footer.footer-logos': FooterFooterLogos;

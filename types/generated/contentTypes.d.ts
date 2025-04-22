@@ -432,6 +432,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'blocks.grid',
         'blocks.archive',
         'blocks.spacer',
+        'blocks.posters',
       ]
     > &
       Schema.Attribute.Required &
