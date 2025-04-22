@@ -9,6 +9,7 @@ export interface BlocksArchive extends Struct.ComponentSchema {
   };
   attributes: {
     anchor_id: Schema.Attribute.String;
+    heading: Schema.Attribute.String;
     posters: Schema.Attribute.Component<'subblocks.poster', true>;
     side_title: Schema.Attribute.String;
   };
@@ -108,20 +109,6 @@ export interface BlocksPageHero extends Struct.ComponentSchema {
       Schema.Attribute.DefaultTo<false>;
     side_title: Schema.Attribute.String;
     title: Schema.Attribute.String;
-  };
-}
-
-export interface BlocksPosters extends Struct.ComponentSchema {
-  collectionName: 'components_blocks_posters';
-  info: {
-    description: '';
-    displayName: 'Posters';
-    icon: 'landscape';
-  };
-  attributes: {
-    anchor_id: Schema.Attribute.String;
-    posters: Schema.Attribute.Media<'images' | 'files', true>;
-    side_title: Schema.Attribute.String;
   };
 }
 
@@ -259,7 +246,7 @@ export interface SubblocksPoster extends Struct.ComponentSchema {
   collectionName: 'components_subblocks_posters';
   info: {
     description: '';
-    displayName: 'Poster';
+    displayName: 'Archive Item';
     icon: 'file';
   };
   attributes: {
@@ -279,6 +266,8 @@ export interface SubblocksTicketCard extends Struct.ComponentSchema {
   attributes: {
     button_label: Schema.Attribute.String;
     button_url: Schema.Attribute.String;
+    info_label: Schema.Attribute.String;
+    info_text: Schema.Attribute.String;
     price: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
@@ -294,7 +283,6 @@ declare module '@strapi/strapi' {
       'blocks.home-hero': BlocksHomeHero;
       'blocks.info-blocks': BlocksInfoBlocks;
       'blocks.page-hero': BlocksPageHero;
-      'blocks.posters': BlocksPosters;
       'blocks.spacer': BlocksSpacer;
       'blocks.ticket-block': BlocksTicketBlock;
       'footer.footer-logos': FooterFooterLogos;

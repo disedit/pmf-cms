@@ -432,7 +432,6 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'blocks.grid',
         'blocks.archive',
         'blocks.spacer',
-        'blocks.posters',
       ]
     > &
       Schema.Attribute.Required &
@@ -447,6 +446,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     ctas: Schema.Attribute.Component<'menu.menu-item', true>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::page.page'>;
+    primary_color: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'meta.seo', false> &
       Schema.Attribute.SetPluginOptions<{
@@ -506,6 +506,7 @@ export interface ApiSettingSetting extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    footer_marquee: Schema.Attribute.String;
     footer_text: Schema.Attribute.Blocks &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

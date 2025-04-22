@@ -41,8 +41,7 @@
         "blocks.countdown",
         "blocks.grid",
         "blocks.archive",
-        "blocks.spacer",
-        "blocks.posters"
+        "blocks.spacer"
       ],
       "required": true,
       "pluginOptions": {
@@ -65,6 +64,9 @@
           "localized": true
         }
       }
+    },
+    "primary_color": {
+      "type": "string"
     }
   }
 }

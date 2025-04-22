@@ -18,6 +18,12 @@
     },
     "button_url": {
       "type": "string"
+    },
+    "info_label": {
+      "type": "string"
+    },
+    "info_text": {
+      "type": "string"
     }
   }
 }

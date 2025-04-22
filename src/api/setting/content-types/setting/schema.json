@@ -105,6 +105,9 @@
           "localized": true
         }
       }
+    },
+    "footer_marquee": {
+      "type": "string"
     }
   }
 }
