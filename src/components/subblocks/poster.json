@@ -20,6 +20,15 @@
     },
     "link": {
       "type": "string"
+    },
+    "hover_heading": {
+      "type": "string"
+    },
+    "hover_description": {
+      "type": "string"
+    },
+    "hover_details": {
+      "type": "text"
     }
   }
 }

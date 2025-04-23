@@ -388,6 +388,7 @@ export interface ApiConcertConcert extends Struct.CollectionTypeSchema {
     cta_label: Schema.Attribute.String;
     cta_url: Schema.Attribute.String;
     date: Schema.Attribute.DateTime & Schema.Attribute.Required;
+    description: Schema.Attribute.String;
     filter_value: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<

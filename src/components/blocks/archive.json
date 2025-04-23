@@ -21,6 +21,10 @@
     },
     "anchor_id": {
       "type": "string"
+    },
+    "stacked_slides": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

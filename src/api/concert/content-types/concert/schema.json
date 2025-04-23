@@ -45,6 +45,9 @@
     },
     "filter_value": {
       "type": "string"
+    },
+    "description": {
+      "type": "string"
     }
   }
 }

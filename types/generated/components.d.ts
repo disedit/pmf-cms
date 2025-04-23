@@ -12,6 +12,8 @@ export interface BlocksArchive extends Struct.ComponentSchema {
     heading: Schema.Attribute.String;
     posters: Schema.Attribute.Component<'subblocks.poster', true>;
     side_title: Schema.Attribute.String;
+    stacked_slides: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
   };
 }
 
@@ -250,6 +252,9 @@ export interface SubblocksPoster extends Struct.ComponentSchema {
     icon: 'file';
   };
   attributes: {
+    hover_description: Schema.Attribute.String;
+    hover_details: Schema.Attribute.Text;
+    hover_heading: Schema.Attribute.String;
     label: Schema.Attribute.String;
     link: Schema.Attribute.String;
     picture: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
