@@ -29,6 +29,23 @@
     },
     "anchor_id": {
       "type": "string"
+    },
+    "poster": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "poster_background": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "poster_content": {
+      "type": "blocks"
     }
   }
 }

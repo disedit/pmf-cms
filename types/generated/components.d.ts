@@ -109,6 +109,9 @@ export interface BlocksPageHero extends Struct.ComponentSchema {
     overlay: Schema.Attribute.Boolean &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<false>;
+    poster: Schema.Attribute.Media<'images'>;
+    poster_background: Schema.Attribute.Media<'images'>;
+    poster_content: Schema.Attribute.Blocks;
     side_title: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
