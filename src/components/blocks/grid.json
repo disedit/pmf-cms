@@ -15,6 +15,11 @@
       "relation": "oneToMany",
       "target": "api::concert.concert"
     },
+    "news": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::story.story"
+    },
     "filters": {
       "type": "text"
     },

@@ -60,6 +60,7 @@ export interface BlocksGrid extends Struct.ComponentSchema {
     concerts: Schema.Attribute.Relation<'oneToMany', 'api::concert.concert'>;
     filters: Schema.Attribute.Text;
     heading: Schema.Attribute.String;
+    news: Schema.Attribute.Relation<'oneToMany', 'api::story.story'>;
     side_title: Schema.Attribute.String;
   };
 }
@@ -166,7 +167,7 @@ export interface GlobalSocials extends Struct.ComponentSchema {
   };
   attributes: {
     icon: Schema.Attribute.Enumeration<
-      ['instagram', 'facebook-f', 'tiktok', 'x']
+      ['instagram', 'facebook-f', 'tiktok', 'x', 'telegram']
     > &
       Schema.Attribute.Required;
     label: Schema.Attribute.String & Schema.Attribute.Required;

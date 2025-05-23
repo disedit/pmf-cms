@@ -17,7 +17,8 @@
         "instagram",
         "facebook-f",
         "tiktok",
-        "x"
+        "x",
+        "telegram"
       ],
       "required": true
     },
