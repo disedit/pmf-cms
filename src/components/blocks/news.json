@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_blocks_grids",
+  "collectionName": "components_blocks_news",
   "info": {
-    "displayName": "Grid",
+    "displayName": "News",
     "icon": "apps",
     "description": ""
   },
@@ -9,14 +9,6 @@
   "attributes": {
     "heading": {
       "type": "string"
-    },
-    "concerts": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::concert.concert"
-    },
-    "filters": {
-      "type": "text"
     },
     "side_title": {
       "type": "string"

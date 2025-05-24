@@ -41,7 +41,8 @@
         "blocks.countdown",
         "blocks.grid",
         "blocks.archive",
-        "blocks.spacer"
+        "blocks.spacer",
+        "blocks.news"
       ],
       "required": true,
       "pluginOptions": {

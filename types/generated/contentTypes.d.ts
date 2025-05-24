@@ -437,6 +437,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'blocks.grid',
         'blocks.archive',
         'blocks.spacer',
+        'blocks.news',
       ]
     > &
       Schema.Attribute.Required &
@@ -576,6 +577,7 @@ export interface ApiStoryStory extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
     link: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::story.story'> &

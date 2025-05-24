@@ -26,6 +26,9 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "date": {
+      "type": "date"
     }
   }
 }

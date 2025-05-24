@@ -60,7 +60,6 @@ export interface BlocksGrid extends Struct.ComponentSchema {
     concerts: Schema.Attribute.Relation<'oneToMany', 'api::concert.concert'>;
     filters: Schema.Attribute.Text;
     heading: Schema.Attribute.String;
-    news: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     side_title: Schema.Attribute.String;
   };
 }
@@ -93,6 +92,20 @@ export interface BlocksInfoBlocks extends Struct.ComponentSchema {
   attributes: {
     anchor_id: Schema.Attribute.String;
     blocks: Schema.Attribute.Component<'subblocks.info-block', true>;
+    side_title: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksNews extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_news';
+  info: {
+    description: '';
+    displayName: 'News';
+    icon: 'apps';
+  };
+  attributes: {
+    anchor_id: Schema.Attribute.String;
+    heading: Schema.Attribute.String;
     side_title: Schema.Attribute.String;
   };
 }
@@ -291,6 +304,7 @@ declare module '@strapi/strapi' {
       'blocks.grid': BlocksGrid;
       'blocks.home-hero': BlocksHomeHero;
       'blocks.info-blocks': BlocksInfoBlocks;
+      'blocks.news': BlocksNews;
       'blocks.page-hero': BlocksPageHero;
       'blocks.spacer': BlocksSpacer;
       'blocks.ticket-block': BlocksTicketBlock;
