@@ -24,13 +24,9 @@
     "anchor_id": {
       "type": "string"
     },
-    "populate": {
-      "type": "enumeration",
-      "enum": [
-        "concerts",
-        "press"
-      ],
-      "required": false
+    "news": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

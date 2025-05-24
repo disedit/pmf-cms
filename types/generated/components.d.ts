@@ -60,7 +60,7 @@ export interface BlocksGrid extends Struct.ComponentSchema {
     concerts: Schema.Attribute.Relation<'oneToMany', 'api::concert.concert'>;
     filters: Schema.Attribute.Text;
     heading: Schema.Attribute.String;
-    populate: Schema.Attribute.Enumeration<['concerts', 'press']>;
+    news: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     side_title: Schema.Attribute.String;
   };
 }
