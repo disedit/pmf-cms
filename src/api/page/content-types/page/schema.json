@@ -68,6 +68,12 @@
     },
     "primary_color": {
       "type": "string"
+    },
+    "marquee_text_top": {
+      "type": "string"
+    },
+    "marquee_text_bottom": {
+      "type": "string"
     }
   }
 }

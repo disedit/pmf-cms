@@ -452,6 +452,8 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     ctas: Schema.Attribute.Component<'menu.menu-item', true>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::page.page'>;
+    marquee_text_bottom: Schema.Attribute.String;
+    marquee_text_top: Schema.Attribute.String;
     primary_color: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'meta.seo', false> &
