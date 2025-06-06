@@ -54,7 +54,12 @@
     "ctas": {
       "type": "component",
       "repeatable": true,
-      "component": "menu.menu-item"
+      "component": "menu.menu-item",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "seo": {
       "type": "component",
